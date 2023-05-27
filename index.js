@@ -1,9 +1,17 @@
-const { Client } = require("discord.js");
-const client = new Client({intents: [131071]});
+const { Client, GatewayIntentBits, Partials, Collection } = require("discord.js");
+const { Guilds, GuildMembers, GuildMessages } = GatewayIntentBits;
+const { User, Message, GuildMember, ThreadMember } = Partials;
+
+const client = new Client({
+    intents: [ Guilds, GuildMembers, GuildMessages ],
+    partials: [ User, Message, GuildMember, ThreadMember ]
+});
+
+const { loadEvents } = require("./Handlers/eventHandler");
 
 client.config = require("./config.json");
+client.events = new Collection;
 
-client.login(client.config.token).then(() => {
-    console.log(`Cliente ${client.user.username} se ha iniciado.`);
-    client.user.setActivity(`Die`);
-}).catch((err) => console.log(err));
+loadEvents(client);
+
+client.login(client.config.token);
