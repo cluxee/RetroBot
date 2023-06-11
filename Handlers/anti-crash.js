@@ -2,6 +2,7 @@ const { EmbedBuilder, WebhookClient } = require("discord.js");
 const { inspect } = require("util"); 
 const webhook = new WebhookClient({
     url: "https://discord.com/api/webhooks/1117260480889753670/BW8Gg3dzR0OlBo6GJPJXy4qmpsO5oXKXX6Jfj2pQBJEzVMmrQTvt45S321OxEpm_L1sg"
+    // Arriba link del webhook donde se enviará el mensaje de errores.
 });
 
 module.exports = (client) => {

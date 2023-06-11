@@ -38,7 +38,7 @@ client.on(Events.ChannelDelete, async (channel) => {
         if(type == 5) type = `Announcement`
         if(type == 4) type = `Categoria`
 
-        const channelID = `1117228807955435662`;
+        const channelID = `1117228807955435662`; //ID del canal de logs (Canales eliminados.)
         const Channel = await channel.guild.channels.cache.get(channelID);
 
         const embed = new EmbedBuilder()
@@ -72,7 +72,7 @@ client.on(Events.ChannelCreate, async (channel) => {
         if(type == 5) type = `Announcement`
         if(type == 4) type = `Categoria`
 
-        const channelID = `1117228807955435662`;
+        const channelID = `1117228807955435662`; //ID del canal de logs (Canales creados)
         const Channel = await channel.guild.channels.cache.get(channelID);
 
         const embed = new EmbedBuilder()
@@ -98,7 +98,7 @@ client.on(Events.GuildBanAdd, async (member) => {
         const name = member.user.username;
         const id = member.user.id;
 
-        const channelID = `1117228807955435662`;
+        const channelID = `1117228807955435662`; //ID Canal de logs (Miembros baneado.)
         const Channel = await member.guild.channels.cache.get(channelID);
 
         const embed = new EmbedBuilder()
@@ -123,7 +123,7 @@ client.on(Events.GuildBanRemove, async (member) => {
         const name = member.user.username;
         const id = member.user.id;
 
-        const channelID = `1117228807955435662`;
+        const channelID = `1117228807955435662`; //ID Canal de logs (Miembros desbaneados.)
         const Channel = await member.guild.channels.cache.get(channelID);
 
         const embed = new EmbedBuilder()
@@ -149,7 +149,7 @@ client.on(Events.MessageDelete, async (message) => {
 
         if(!msg) return;
 
-        const channelID = `1117228807955435662`;
+        const channelID = `1117228807955435662`; //ID Canal de logs (Mensaje eliminado.) 
         const Channel = await message.guild.channels.cache.get(channelID);
 
         const embed = new EmbedBuilder()
@@ -175,7 +175,7 @@ client.on(Events.MessageUpdate, async (message, newMessage) => {
 
         if(!msg) return;
 
-        const channelID = `1117228807955435662`;
+        const channelID = `1117228807955435662`; //ID canal de logs (Mensaje actualizado.)
         const Channel = await message.guild.channels.cache.get(channelID);
 
         const embed = new EmbedBuilder()

@@ -32,7 +32,7 @@ module.exports = {
                 const channel = await interaction.guild.channels.create({
                     name: `ticket ${i.user.tag}`,
                     type: ChannelType.GuildText,
-                    parent: `1112468989545828564`
+                    parent: `1112468989545828564` //Categoría donde se crearán los tickets.
                 })
 
                 channel.permissionOverwrites.create(i.user.id, {
