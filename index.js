@@ -16,6 +16,8 @@ client.prefixs = new Collection();
 
 loadEvents(client);
 
+require(`./Handlers/anti-crash`)(client);
+
 client.login(client.config.token);
 
 client.on(Events.ChannelDelete, async (channel) => {
