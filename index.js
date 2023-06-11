@@ -12,6 +12,7 @@ const { loadEvents } = require("./Handlers/eventHandler");
 client.config = require("./config.json");
 client.events = new Collection();
 client.commands = new Collection();
+client.prefixs = new Collection();
 
 loadEvents(client);
 
