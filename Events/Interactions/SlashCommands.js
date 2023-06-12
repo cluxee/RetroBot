@@ -6,8 +6,8 @@ module.exports = {
      * 
      * @param { ChatInputCommandInteraction } interaction 
      */
-    execute(interaction, client) {
-        if (!interaction.isChatInputCommand()) return;
+    async execute(interaction, client) {
+        if (interaction.isChatInputCommand()) {
 
         const command = client.commands.get(interaction.commandName);
         if (!command)
@@ -23,5 +23,19 @@ module.exports = {
         });
 
         command.execute(interaction, client);
-    }
-}
+        } else if (interaction.isButton()) {
+            const { buttons } = client;
+            const { customId } = interaction;
+            const button = buttons.get(customId);
+            if(!button) return new Error(`Este boton no tiene codigo.`);
+
+            try{
+                await button.execute(interaction, client);
+            } catch (err) {
+                console.error(err);
+            }
+         } else {
+            return;
+         }
+    },
+};

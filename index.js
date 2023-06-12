@@ -13,6 +13,7 @@ client.config = require("./config.json");
 client.events = new Collection();
 client.commands = new Collection();
 client.prefixs = new Collection();
+client.buttons = new Collection();
 
 loadEvents(client);
 
