@@ -1,6 +1,6 @@
 const { loadCommands } = require("../../Handlers/commandHandler");
 const { loadPrefixs } = require("../../Handlers/prefixHandler")
-const { ActivityType } = require("discord.js")
+const { ActivityType } = require("discord.js");
 
 module.exports = {
     name: "ready",
