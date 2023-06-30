@@ -5,7 +5,7 @@ var timeout = [];
 
 module.exports = {
     data: new SlashCommandBuilder()
-    .setName('wikipedia')
+    .setName('wiki')
     .setDMPermission(false)
     .setDescription('Busca información en la Wikipedia.')
     .addStringOption(option => 
@@ -37,8 +37,8 @@ module.exports = {
         const embed = new EmbedBuilder()
         .setTitle(`La búsqueda ${resultado.raw.title} fue enviada.`)
         .setAuthor({ name: ('📰 ¡Wiki ha encontrado resultados potenciales!')})
-        .addFields({ name: `• Resultados de wiki`, value: `${resumen.slice( 0, 1021)}...`})
-        .setFooter({ text: ('• Busqueda completa.')})
+        .addFields({ name: `• Resultados de wiki`, value: `${resumen.slice( 0, 1021)}`})
+        .setFooter({ text: ('Tu busqueda ha sido completada.')})
         .setColor('#6f00ff')
         .setThumbnail('https://cdn.discordapp.com/attachments/1069421539457503355/1112164624675131473/918194cf363e75f01ba729ab5379ecc2.jpg')
         .setTimestamp()
