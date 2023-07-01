@@ -1,7 +1,7 @@
 const { EmbedBuilder, Message, PermissionFlagsBits } = require("discord.js");
 
 module.exports = {
-    name: "anuncio",
+    name: "ad",
 
     /**
      * 
@@ -17,14 +17,14 @@ module.exports = {
         const contenido = args.join(" ");
 
         const embed = new EmbedBuilder()
-        .setTitle("ANUNCIO")
+        .setTitle("ADVERTISEMENT - ANUNCIO")
         .setDescription(`${contenido}`)
-        .setThumbnail("https://img.freepik.com/vector-premium/diseno-logo-rk_731343-702.jpg")
+        .setThumbnail("https://i0.wp.com/gamerfocus.co/wp-content/uploads/2016/11/no-mans-sky-hello-games-anuncio-nueva-actualizacion-foundation-update-1.gif?resize=740%2C425&ssl=1")
         .setColor('#000001')
         .setFooter({ text: ("         Equipo adminsitrativo de RetroKode") })
         .setTimestamp()
-        .setImage("https://i.pinimg.com/originals/4f/79/d1/4f79d16b5be08fbbdfd8a1978bb59075.gif")
+        .setImage("https://blog.vicensvives.com/wp-content/uploads/2019/02/10-gifs-gatos.jpg")
 
-        message.channel.send({ embeds: [embed] })
+        message.channel.send({ content: "||@everyone/@here||", embeds: [embed] })
     }
 }
