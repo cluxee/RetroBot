@@ -16,7 +16,7 @@ let isEditingPlaylist = false;
 module.exports = {
     mantenimiento: true,
     data: new SlashCommandBuilder()
-        .setName("music")
+        .setName("musica")
         .setDescription("Reproduce música")
         .addSubcommand((subcommand) =>
             subcommand
