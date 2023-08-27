@@ -1,4 +1,4 @@
-const { ChatInputCommandInteraction, SlashCommandBuilder, EmbedBuilder} = require("discord.js");
+const { ChatInputCommandInteraction, SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -16,7 +16,7 @@ module.exports = {
 
         const { guild } = interaction;
         const { user } = interaction;
-        const channel = interaction.guild.channels.cache.find((c) => c.id === `1117584827038847078`); //ID del canal de sugerencias.
+        const channel = interaction.guild.channels.cache.find((c) => c.id === `1057084579321741405`); //ID del canal de sugerencias.
         
         const embed = new EmbedBuilder()
         .setTitle(`Sugerencia de ${interaction.user.username}`)
