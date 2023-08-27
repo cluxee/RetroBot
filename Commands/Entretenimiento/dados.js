@@ -23,7 +23,7 @@ module.exports = {
         .addFields(
           {name: '🎲 - Dados:', value: `\`\`\`${dadosR}\`\`\``},
         )
-        .setColor('Random')
+        .setColor('#6f00ff')
         .setFooter({ text: `${interaction.guild.name}`, iconURL: client.user.avatarURL({ dynamic: true}) })
         .setTimestamp()
 
