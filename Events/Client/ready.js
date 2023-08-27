@@ -16,6 +16,10 @@ module.exports = {
             [{
                 name: "RetroKode",
                 type: ActivityType.Watching
+            }],
+            [{
+                name: "RetroBooks",
+                type: ActivityType.Watching
             }]
         ];
         setInterval(() => {
