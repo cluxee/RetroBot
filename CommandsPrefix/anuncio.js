@@ -17,9 +17,9 @@ module.exports = {
         const contenido = args.join(" ");
 
         const embed = new EmbedBuilder()
-        .setTitle("📌 ADVERTISEMENT - ANUNCIO")
+        .setTitle("ADVERTISEMENT - ANUNCIO 📌")
         .setDescription(`${contenido}`)
-        .setThumbnail("https://i0.wp.com/gamerfocus.co/wp-content/uploads/2016/11/no-mans-sky-hello-games-anuncio-nueva-actualizacion-foundation-update-1.gif?resize=740%2C425&ssl=1")
+        .setThumbnail("https://t4.ftcdn.net/jpg/03/82/30/01/360_F_382300191_q2UEGNykRGnwl6Dgjw6W8JqoaXIp1oRi.jpg")
         .setColor('#000001')
         .setFooter({ text: ("Equipo adminsitrativo de RetroKode") })
         .setTimestamp()

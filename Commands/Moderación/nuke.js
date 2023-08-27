@@ -18,7 +18,7 @@ module.exports = {
             .setTitle("💥 **NUKE**")
             .setDescription(`¡Este canal ha sido nukeado!, ahora lo verás completamente limpió.`)
             .setFooter({ text: "Equipo administrativo de restrokode" })
-            .setColor("6f00ff")
+            .setColor("#6f00ff")
             .setImage("https://pfps.gg/assets/banners/4369-planet-explosion.gif")
             .setTimestamp()
             
