@@ -131,7 +131,7 @@ module.exports = (client) => {
     
             if(!msg) return;
     
-            const channelID = `1117228807955435662`; //ID Canal de logs (Mensaje eliminado.) 
+            const channelID = `1057120509902459021`; //ID Canal de logs (Mensaje eliminado.) 
             const Channel = await message.guild.channels.cache.get(channelID);
     
             const embed = new EmbedBuilder()
