@@ -13,6 +13,7 @@ module.exports = {
             { name: "RetroBooks", value: "RetroBooks"},
             { name: "RetroBot", value: "RetroBot"},
             { name: "RetroWeb", value: "RetroWeb"},
+            { name: "Administración", value: "Administración"}
         )
         .setRequired(true))
 
@@ -35,7 +36,7 @@ module.exports = {
          */
 
         execute(interaction) {
-            const canal = interaction.guild.channels.cache.get("1146932590629093508");
+            const channel = interaction.guild.channels.cache.find((c) => c.id === `1147997107857412147`); //ID del canal de sugerencias.
             const reseña = interaction.options.getString("reseña");
             const estrellas = interaction.options.getString("estrellas");
             const producto = interaction.options.getString("producto");
@@ -59,11 +60,17 @@ module.exports = {
                 .setColor("#6f00ff")
                 .setFooter({ text: `Enviada desde ${interaction.guild} por ${interaction.user.username}`})
 
+                const embed2 = new EmbedBuilder()
+                .setTitle("Reseña enviada correctamente ✅")
+                .setDescription("Gracias por enviar tu reseña.")
+                .setColor("#6f00ff")
+                .setTimestamp()
 
-                interaction.channel.send({ embeds: [embed] });
-                interaction.reply({
-                    content: "Gracias por darnos una reseña.",
-                    ephemeral: true,
-                });
+                interaction.reply({ embeds: [embed2], ephemeral: true })
+
+                channel.send({embeds: [embed], fetchReply: true});
+
+                
+
         },
 };
