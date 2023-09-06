@@ -1,4 +1,4 @@
-const { ChatInputCommandInteraction, EmbedBuilder, SlashCommandBuilder  } = require("discord.js");
+const { ChatInputCommandInteraction, EmbedBuilder, SlashCommandBuilder, PermissionFlagsBits  } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -9,7 +9,8 @@ module.exports = {
         option.setName("titulo")
         .setDescription("Establece un titulo a este anuncio")
         .setRequired(true))   
-    .addStringOption(option => option.setName("mensaje").setDescription("mensaje").setRequired(true)),
+    .addStringOption(option => option.setName("mensaje").setDescription("mensaje").setRequired(true))
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
     /**
      * @param { ChatInputCommandInteraction } interaction
