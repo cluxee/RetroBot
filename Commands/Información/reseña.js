@@ -2,7 +2,7 @@ const { ChatInputCommandInteraction, SlashCommandBuilder, EmbedBuilder } = requi
 
 module.exports = {
     data: new SlashCommandBuilder()
-    .setName("reseñas")
+    .setName("review")
     .setDescription("Escribe una reseña sobre RetroKode.")
     .setDMPermission(false)
     .addStringOption(option => option.setName("reseña").setDescription("reseña").setRequired(true))
